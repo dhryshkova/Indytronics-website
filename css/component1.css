@@ -1,0 +1,199 @@
+*,
+*:after,
+*::before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#mainmenu{
+	position: relative;
+	overflow:hidden;
+	padding-left: 75px;
+	text-align: center;
+}
+ul.topnav {
+	list-style-type: none;
+	overflow: hidden;
+}
+
+/* Float the list items side by side */
+ul.topnav li {
+	float: left;
+}
+
+/* Style the links inside the list items */
+ul.topnav li a {
+	display: inline-block;
+	position: relative;
+	text-align: center;
+	margin: 15px 25px;
+	outline: none;
+	color: #2e2b2b;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 1.35em;
+}
+/* Change background color of links on hover */
+
+/* Hide the list item that contains the link that should open and close the topnav on small screens */
+ul.topnav li.icon {display: none;}
+/* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon) */
+@media screen and (max-width:680px) {
+	ul.topnav li:not(:first-child) {
+		display: none;
+	}
+	ul.topnav li.icon {
+		float: right;
+		display: inline-block;
+	}
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens */
+@media screen and (max-width:680px) {
+	ul.topnav.responsive {position: relative;}
+	ul.topnav.responsive li.icon {
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+	ul.topnav.responsive li {
+		float: none;
+		display: inline;
+	}
+	ul.topnav.responsive li a {
+		display: block;
+		text-align: left;
+	}
+
+}
+@media all and (max-width:480px) {
+	ul.topnav li a {
+		position: relative;
+		outline: none;
+		color: #2e2b2b;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-size: 1em;
+	}
+	#mainmenu{
+		padding-left: 0;
+	}
+	ul a:hover,
+	ul a:focus {
+		outline: none;
+	}
+	ul.topnav.responsive a {
+		padding: 1px;
+		color: #2e2b2b;
+	}
+
+	ul.topnav.responsive a::before,
+	ul.topnav.responsive a::after {
+		position: absolute;
+		left: 0;
+		width: 100%;
+		height: 2px;
+		background: green;
+		content: '';
+		opacity: 0;
+		-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+		-moz-transition: opacity 0.3s, -moz-transform 0.3s;
+		transition: opacity 0.3s, transform 0.3s;
+		-webkit-transform: translateY(-10px);
+		-moz-transform: translateY(-10px);
+		transform: translateY(-10px);
+	}
+
+	ul.topnav.responsive a::before {
+		top: 0;
+		-webkit-transform: translateY(-10px);
+		-moz-transform: translateY(-10px);
+		transform: translateY(-10px);
+	}
+
+	.cl-effect-21 a::after {
+		bottom: 0;
+		-webkit-transform: translateY(10px);
+		-moz-transform: translateY(10px);
+		transform: translateY(10px);
+	}
+
+	.cl-effect-21 a:hover,
+	.cl-effect-21 a:focus {
+		color: green;
+	}
+
+	.cl-effect-21 a:hover::before,
+	.cl-effect-21 a:focus::before,
+	.cl-effect-21 a:hover::after,
+	.cl-effect-21 a:focus::after {
+		opacity: 1;
+		-webkit-transform: translateY(0px);
+		-moz-transform: translateY(0px);
+		transform: translateY(0px);
+	}
+}
+
+
+
+
+
+ul a:hover,
+ul a:focus {
+	outline: none;
+}
+.cl-effect-21 a {
+	padding: 10px;
+	color: #2e2b2b;
+	text-shadow: none;
+	-webkit-transition: color 0.3s;
+	-moz-transition: color 0.3s;
+	transition: color 0.3s;
+}
+
+.cl-effect-21 a::before,
+.cl-effect-21 a::after {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background: #e26161;
+	content: '';
+	opacity: 0;
+	-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+	-moz-transition: opacity 0.3s, -moz-transform 0.3s;
+	transition: opacity 0.3s, transform 0.3s;
+	-webkit-transform: translateY(-10px);
+	-moz-transform: translateY(-10px);
+	transform: translateY(-10px);
+}
+
+.cl-effect-21 a::before {
+	top: 0;
+	-webkit-transform: translateY(-10px);
+	-moz-transform: translateY(-10px);
+	transform: translateY(-10px);
+}
+
+.cl-effect-21 a::after {
+	bottom: 0;
+	-webkit-transform: translateY(10px);
+	-moz-transform: translateY(10px);
+	transform: translateY(10px);
+}
+
+.cl-effect-21 a:hover,
+.cl-effect-21 a:focus {
+	color: #e26161;
+}
+
+.cl-effect-21 a:hover::before,
+.cl-effect-21 a:focus::before,
+.cl-effect-21 a:hover::after,
+.cl-effect-21 a:focus::after {
+	opacity: 1;
+	-webkit-transform: translateY(0px);
+	-moz-transform: translateY(0px);
+	transform: translateY(0px);
+}
